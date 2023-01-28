@@ -1,0 +1,503 @@
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    font-size:62.5%; /* 1 rem always = 10px*/
+
+    /* Font Colors */
+    --darkGrey: #2E323F;
+    --mediumGrey: #3B4050;
+    --lightGrey:#6F737F;
+    --lightestGrey:rgb(242, 242, 242);
+    --tan: #A59678;
+}
+
+body{
+    font-size: 1.8rem; /* 1em equals 18px (use for font) */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h1, h2, h3, h4{
+    font-family: 'Oswald', sans-serif;
+    line-height: 1;
+}
+
+h1{
+    color:white; 
+    font-size:2.5em; 
+}
+
+h3{
+    font-size:2em;
+}
+
+h4{
+   font-size:1.66em; /* <-- 30px (desktop-ready)*/
+}
+
+p{
+    font-weight:lighter;
+    line-height:1.5;
+    color:white;
+}
+
+p, a{
+    font-size:.88em;
+}
+a{
+    color: white;
+    text-decoration:none;
+}
+
+.container{
+    padding:2.5rem;  
+    
+}
+
+ul{
+    list-style-type:none;
+}
+
+/* Elements inside the <section> containers (w/classes .left & .right ) */
+section > *, .banner__h4, .primary__h4, .footer__h4{
+    margin-bottom:2rem;
+}
+
+
+button{
+    border:none;
+    background-color: var(--tan);
+    padding:1.5rem 2rem;
+    border-radius:100px;
+    cursor:pointer;
+    font-size:inherit; /*< --- goal font-size is 1.2em*/
+}
+
+/* ........................ HEADER .................... */
+
+header{
+    position:sticky;
+    top:0;
+    background-color:var(--darkGrey);
+    height:9rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/*  circe toggle menu <button> */
+.nav__btn{
+    border-radius: 50%;
+    position:absolute;
+    left:3.5rem;
+    padding:2.5rem 1.5rem;
+}
+
+.nav__btn, nav{
+    left:3.5rem;
+}
+
+/* <div> */
+.hamburger, .hamburger::before, .hamburger::after{
+    height:3px;
+    width:3rem;
+    background-color:var(--mediumGrey); 
+    border-radius: 50px;
+}
+
+.hamburger::before, .hamburger::after{
+    content: "";
+    position:absolute;
+    left: 1.5rem;
+}
+
+.hamburger::before{
+    bottom:1.5rem
+}
+.hamburger::after{
+    top:1.5rem
+}
+
+/* <a> */
+.crl__link{
+    display:flex;
+    
+}
+
+/* ................................... NAV ................................. */
+
+nav{
+    position:absolute;
+    top:9rem;
+    width:40rem;  /* <---- set width of <nav>, <ul> is block (takes entire 40rem), and its <li> set to 'block' <-- takes up entire <ul> width */
+    max-width:100%;
+    display:none;
+}
+
+/* <ul> */
+.nav__list{
+    font-family:'Oswald', sans-serif;
+    text-transform: uppercase;
+
+}
+
+/* <li> */
+.nav__list__item{
+    background-color:var(--darkGrey);
+    border-top:1px solid var(--lightGrey);
+    text-align:right;
+}  
+
+/* <a>, not <btn> <a> */
+.nav__list__link{
+    display:block;        /* <-- make <li> <a>'s take up entire width of <li> (~block) */  
+}
+
+/* only the <li> w/<button> */
+.nav__list__link,.nav__list__item:has(button){
+    padding:1.75rem 2rem;  /* <-- same padding in the block-level <a>'s as for around the button */
+}
+
+/* <a> */
+.nav__list__link, .btn__link{  
+    font-family:'Oswald', sans-serif;
+    font-size:1.2em;  
+    text-transform: uppercase;
+        
+}
+
+/* HOVER STATE background-color change for drop-down menu items */
+.nav__list__item:hover{
+    background-color:var(--mediumGrey);
+}
+
+/* utility class for hiding/displaying <nav> w/ JS */
+.displayNav{
+    display:block;
+}
+
+/* .................................................... MAIN .......................................... */
+
+/* ..................................... HERO ................................ */
+
+.container__hero{
+    background-color: var(--mediumGrey);
+}
+
+.h1__tan{
+    color:var(--tan);    
+}
+
+/* ......................................BANNER ............................... */
+
+.container__banner{
+    background-color: var(--lightestGrey);
+    padding:7rem 5rem;
+}
+
+.banner__h4{
+    color:var(--tan);
+}
+
+.banner__para{
+    color: var(--darkGrey);   
+}
+
+/* ......................................PRIMARY ............................... */
+
+.container__primary{
+    padding-top:5rem;
+    padding-bottom:5rem;
+  }
+
+
+/* .......... LEFT............. */
+
+h3{
+    color:var(--tan); 
+}
+
+.primary__left{
+    margin-bottom:4rem;
+}
+
+.primary__left p{
+    color:var(--darkGrey);
+}
+
+.img__container{
+    max-height:33rem;
+    overflow:hidden;
+}
+
+.primary__img{
+    display:block; 
+    margin:0 auto;
+    min-width:100%;
+}
+
+/* .......... RIGHT............. */
+
+.primary__right__box{
+    margin:0 auto 2rem auto;
+    
+    width: 35rem;
+    max-width:100%;
+
+    background-color: var(--mediumGrey);
+    padding:2rem;
+    text-align: center;   
+}
+
+.primary__h4{
+    color:white;
+}
+
+/* .................................................... FOOTER .......................................... */
+
+
+.container__footer{
+    background-color: var(--mediumGrey);
+}
+
+
+.footer__top{
+    margin:2.5rem 0 5rem 0;
+}
+
+
+h2{
+    max-width:max-content; 
+    color:white;
+    font-size:2em;
+    margin:0 auto;
+}
+
+.footer__h4{
+ color:var(--tan);
+}
+
+
+.footer__list__item{
+    margin-bottom:2rem;
+}
+
+
+
+.footer__para, .footer__link{
+   font-weight: normal;
+    color: rgb(255, 255, 255, .5);
+}
+
+/* ...................................... MEDIA QUERIES .....................................*/
+
+
+@media (max-width:408px){
+   nav{
+    left:unset;
+    right:0;
+   }
+}
+    
+@media (min-width:700px){
+
+
+/* add side padding to all sections except for the two in the .hero, and the two in the footer */
+    section:not(.hero__left):not(.hero__right):not(.container__footer > *){
+        padding:0 5%;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    /* ......................... HERO .................... */
+
+    .container__hero{
+        padding:0 10%;   
+    }
+
+    .hero {
+        min-height:500px;
+    } 
+
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1%;
+  }
+
+  .hero__left{
+    max-width:430px;
+  }
+  
+  .hero__right{
+    max-width:40rem;
+    align-self:flex-end;
+    margin-bottom:12rem;
+  }
+
+/* ........................... BANNER ....................... */
+
+  .banner__box{
+    max-width:330px;
+    text-align:center;
+    margin-bottom:0;
+
+  }
+  /* ........................ PRIMARY (plus ............................ */
+  
+.container__primary{
+    padding-top:7rem;
+    padding-bottom:7rem;
+}
+
+.primary__left > *{
+    margin-bottom:4rem;
+}
+  
+  
+  .section__banner, .primary__right, .footer__bottom{
+    display:flex;
+    justify-content: center;
+    gap:6%;
+  }
+
+
+
+  h3{
+    font-size:3em;
+}
+
+  /* .............................. FOOTER ............................. */
+
+  .container__footer{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+  }
+
+
+  .footer__bottom{
+    gap: unset;
+    justify-content:space-between;
+    flex-wrap: wrap ;
+    max-width:654px;
+  }
+
+  .about__box{
+    margin-bottom:3rem;
+  }
+
+  h2{
+    font-size:3em;
+  }
+
+  h4{
+    font-size:1.5em;
+  }
+
+}
+
+@media (min-width:1000px){
+/* ...............................HEADER.......................... */
+
+header{
+    justify-content: space-between;
+    padding:0 2rem;
+}
+
+h1{
+    font-size:4em;
+}
+
+.nav__btn{
+    display:none;
+}
+
+nav{
+    width:unset;
+    display:block;
+    position: static;
+}
+
+.nav__list{
+    display:flex;
+    align-items: center;;
+}
+
+.nav__list__item{
+    border-top: none;;
+}
+
+/* adjust width of the nav list <li>'s (except for the btn-containing one), plus also the btn itself */
+.nav__list__item:not(:has(.nav__list__btn)), .nav__list__btn {
+    min-width:15rem;
+    text-align:center;
+}
+
+.nav__list__item:has(button){
+    padding:0;
+}
+
+/* ...............................MAIN............................ */
+
+    .container__primary{
+        display:flex;
+        justify-content:center;
+    }
+
+    .primary{
+        display:flex;
+    }
+
+    .primary__left{
+        max-width:110rem;
+    }
+
+    .primary__right{
+        display:unset;
+    }
+
+    .primary__img{
+        width:unset;
+    }
+
+    /* .....................................FOOTER............................ */
+
+    .container__footer{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        height:524px;
+    }
+
+    .footer__top{
+        margin:0;
+    }
+ 
+      .footer__bottom{
+        margin:0;
+        max-width:none;
+        width:95%;
+        max-width:115rem;
+        flex-wrap: nowrap ;
+        justify-content: space-between;
+      }
+
+      .footer__para{
+        width:400px;
+      }
+
+      .about__box{
+        margin-bottom:0;
+      }
+
+}

@@ -215,7 +215,6 @@ nav{
     padding-bottom:5rem;
   }
 
-
 /* .......... LEFT............. */
 
 h3{
@@ -265,11 +264,9 @@ h3{
     background-color: var(--mediumGrey);
 }
 
-
 .footer__top{
     margin:2.5rem 0 5rem 0;
 }
-
 
 h2{
     max-width:max-content; 
@@ -282,12 +279,9 @@ h2{
  color:var(--tan);
 }
 
-
 .footer__list__item{
     margin-bottom:2rem;
 }
-
-
 
 .footer__para, .footer__link{
    font-weight: normal;
@@ -305,8 +299,6 @@ h2{
 }
     
 @media (min-width:700px){
-
-
 /* add side padding to all sections except for the two in the .hero, and the two in the footer */
     section:not(.hero__left):not(.hero__right):not(.container__footer > *){
         padding:0 5%;
@@ -437,6 +429,10 @@ nav{
     border-top: none;;
 }
 
+.nav__list__item:last-child:hover{
+    background-color:inherit;
+}
+
 /* adjust width of the nav list <li>'s (except for the btn-containing one), plus also the btn itself */
 .nav__list__item:not(:has(.nav__list__btn)), .nav__list__btn {
     min-width:15rem;
@@ -444,7 +440,7 @@ nav{
 }
 
 .nav__list__item:has(button){
-    padding:0;
+    padding:0 2rem;
 }
 
 /* ...............................MAIN............................ */

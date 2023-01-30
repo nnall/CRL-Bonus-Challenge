@@ -25,6 +25,7 @@ body{
 h1, h2, h3, h4{
     font-family: 'Oswald', sans-serif;
     line-height: 1;
+    letter-spacing: -1px;
 }
 
 h1{
@@ -32,8 +33,13 @@ h1{
     font-size:2.5em; 
 }
 
+h2{
+    color:var(--mediumGrey);
+    font-size:2.5em;
+}
+
 h3{
-    font-size:2em;
+    font-size:1.66em;    /*2em;*/ 
 }
 
 h4{
@@ -64,7 +70,7 @@ ul{
 }
 
 /* Elements inside the <section> containers (w/classes .left & .right ) */
-section > *, .banner__h4, .primary__h4, .footer__h4{
+section > *, .banner__h3, .primary__h3, .footer__h4{
     margin-bottom:2rem;
 }
 
@@ -253,7 +259,8 @@ h3{
     text-align: center;   
 }
 
-.primary__h4{
+
+.primary__h3{
     color:white;
 }
 
@@ -265,10 +272,10 @@ h3{
 }
 
 .footer__top{
-    margin:2.5rem 0 5rem 0;
+    margin: 2.5rem auto 5rem auto;
 }
 
-h2{
+.footer__h2{
     max-width:max-content; 
     color:white;
     font-size:2em;
@@ -311,7 +318,7 @@ h2{
     /* ......................... HERO .................... */
 
     .container__hero{
-        padding:0 10%;   
+        padding:0 10% 0 17%;;   
     }
 
     .hero {
@@ -361,12 +368,6 @@ h2{
     gap:6%;
   }
 
-
-
-  h3{
-    font-size:3em;
-}
-
   /* .............................. FOOTER ............................. */
 
   .container__footer{
@@ -388,8 +389,14 @@ h2{
     margin-bottom:3rem;
   }
 
-  h2{
+  .primary__h2{
     font-size:3em;
+    font-weight: bolder;;
+    
+  }
+
+  .footer__h2{
+    font-size:2.5em;
   }
 
   h4{
@@ -471,8 +478,12 @@ nav{
     .container__footer{
         display:flex;
         flex-direction:column;
-        justify-content:space-evenly;
+        justify-content:space-around;
         height:524px;
+    }
+
+    .footer__h2{
+        font-size:3em;
     }
 
     .footer__top{
